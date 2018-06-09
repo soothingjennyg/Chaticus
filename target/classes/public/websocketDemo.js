@@ -13,7 +13,13 @@ id("message").addEventListener("keypress", function (e) {
         sendAndClear(e.target.value);
     }
 });
-
+// Add event listeners to button and input field to shutup button
+id("shutup").addEventListener("dblclick", () => alert("shutup"));
+id("message").addEventListener("keypress", function (e) {
+    if (e.keyCode === 13) { // Send message if enter is pressed in input field
+        sendAndClear(e.target.value);
+    }
+});
 function sendAndClear(message) {
     if (message !== "") {
         ws.send(message);
@@ -24,5 +30,5 @@ function sendAndClear(message) {
 function updateChat(msg) { // Update chat-panel and list of connected users
     let data = JSON.parse(msg.data);
     id("chat").insertAdjacentHTML("afterbegin", data.userMessage);
-    id("userlist").innerHTML = data.userlist.map(user => "<li>" + user + "</li>").join("");
+    id("userlist").innerHTML = data.userlist.map(user => "<li><button onClick=alert('"+user+"') id=\"shutup\">"+ user +"</button>" + user + "</li>").join("");
 }

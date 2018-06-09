@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.eclipse.jetty.websocket.api.Session;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import app.util.HerokuUtil;
 import static j2html.TagCreator.article;
@@ -19,6 +20,8 @@ public class Chat {
 
     private static Map<WsSession, String> userUsernameMap = new ConcurrentHashMap<>();
     private static int nextUserNumber = 1; // Assign to username for next connecting user
+    private static UserList users = new UserList();
+    private static MessageList cl = new MessageList("public", true);
 
     public static void main(String[] args) {
         Javalin.create()
@@ -55,6 +58,43 @@ public class Chat {
                 e.printStackTrace();
             }
         });
+       /* private static void privateMessage(String sender, String receiver, String message) {
+            userUsernameMap.keySet().stream().filter(Session::isOpen).forEach(session -> {
+                try {
+                    session.send(
+                            new JSONObject()
+                                    .put("userMessage", createHtmlMessageFromSender(sender, message))
+                                    .put("userlist", userUsernameMap.values()).toString()
+                    );
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });*/
+    }
+
+       private static String buildMessageString(String text, String sender, boolean pri) {
+        JSONArray ja = new JSONArray();
+        UserState u[] = users.getUsers();
+
+        /* Construct the current user state */
+        for(int i=0;i<u.length;i++){
+            ja.put(new JSONObject().put("name", u[i].name).put("status", u[i].status));
+        }
+
+        JSONObject data = new JSONObject()
+                .put("userMessage", text)
+                .put("from", sender)
+                .put("private", true)
+                .put("userlist", ja);
+
+        return data.toString();
+    }
+
+    private static String buildErrorMessageString(String text) {
+        JSONObject data = new JSONObject()
+                .put("error", text);
+
+        return data.toString();
     }
 
     // Builds a HTML element with a sender-name, a message, and a timestamp
@@ -64,5 +104,11 @@ public class Chat {
                 span(attrs(".timestamp"), new SimpleDateFormat("HH:mm:ss").format(new Date())),
                 p(message)
         ).render();
+    }
+
+    public static void sendMessage(ChatUser recipient, String sender, String message, boolean pri) {
+        if(recipient.getSession().isOpen()) {
+            recipient.getSession().send(buildMessageString(message, sender, pri));
+        }
     }
 }
