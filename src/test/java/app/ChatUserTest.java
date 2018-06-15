@@ -7,35 +7,10 @@ import static org.junit.Assert.*;
 public class ChatUserTest {
 
     @Test
-    public void findUserMatch() {
-    }
-
-    @Test
-    public void validatePassword() {
-    }
-
-    @Test
     public void verify() {
-        assertFalse(false);
+        ChatUser t = new ChatUser("user", "pass", 1);
+        assertTrue(t.verify("user", "pass"));
+        assertFalse(t.verify("user", "goop"));
     }
 
-    @Test
-    public void getStatus() {
-    }
-
-    @Test
-    public void getUserName() {
-    }
-
-    @Test
-    public void setStatus() {
-    }
-
-    @Test
-    public void setSession() {
-    }
-
-    @Test
-    public void getSession() {
-    }
 }
