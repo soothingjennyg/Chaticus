@@ -17,7 +17,6 @@ public class ChatList {
     }
 
     public MessageList findChat(ChatUser p1, ChatUser p2){
-
         if(p1 == null){
             return publicChat;
         }else{

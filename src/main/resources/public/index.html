@@ -4,19 +4,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WebsSockets</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div id="chatControls">
-    <input id="message" placeholder="Type your message, if private double click on user">
-    <button id="send">Send</button>
-    <button id="archive">Archive</button>
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Create Account</a></li>
+        <li><a data-toggle="tab" href="#menu1">Login</a></li>
+        <li id="chattab"><a data-toggle="tab" href="#menu2">Chat</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Create Account</h3>
+                    <div id="createFields">
+                        <input id="create_username" placeholder="Username">
+                        <input id="create_password" placeholder="password">
+                        <button id="create">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Login</h3>
+                    <div id="loginFields">
+                        <input id="username" placeholder="Username">
+                        <input id="password" placeholder="password">
+                        <button id="login">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Users</h3>
+                    <ul id="userlist2"> <!-- Built by JS --> </ul>
+                    <button onclick=setPrivateChat(null) >Set to public chatroom</button><br>
+                    <button onclick=loadArchive(null) >Public archive</button><br>
+                    <button onclick=logout(null) >logout</button>
+                </div>
+                <div class="col-sm-4">
+                    <div id="chatControls">
+                        <div id="chatWith">
+                        </div>
+                        <input id="message" placeholder="Type your message">
+                        <button id="send">Send</button>
+                    </div>
+                    <div id="chat">    <!-- Built by JS --> </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="privateChatControls">
-    <button id="shutup">Shutup</button>
-</div>
-<ul id="userlist"> <!-- Built by JS --> </ul>
-//<button id="archive">Archive</button>
-<div id="chat">    <!-- Built by JS --> </div>
+
 
 <script src="websocketDemo.js"></script>
 </body>
