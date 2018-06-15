@@ -26,6 +26,14 @@ public class ChatList {
             if(ml.isPresent()){
                 return ml.get();
             }
+
+            String chatname2= p2.getUserName() + '-' + p1.getUserName();
+
+            Optional<MessageList> ml2 = chats.stream().filter(u -> chatname2.equals(u.getName())).findFirst();
+            if(ml2.isPresent()){
+                return ml2.get();
+            }
+
             /* Create the chat room and subscribe both the users */
             MessageList msgList = addChat(chatname, true);
             msgList.subscribe(p1);

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00932da7-b85f-4569-a1da-5b76900ce447" name="Default" comment="This is try 3 of the chat program.  This code is based off of open source code.">
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/ChatUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/ChatUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/MessageListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/MessageListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/UserListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/UserListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/ChatList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ChatList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/websocketDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/websocketDemo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,6 +35,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ChatList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/app/ChatList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/style.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,17 +56,8 @@
       <file leaf-file-name="UserListTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/app/UserListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Assert.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="333" selection-start-line="333" selection-end-line="333" />
+            <state relative-caret-position="616">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -72,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="websocketDemo.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="websocketDemo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/websocketDemo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="106" column="218" selection-start-line="106" selection-start-column="218" selection-end-line="106" selection-end-column="218" />
+            <state relative-caret-position="462">
+              <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -108,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageListTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageListTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/app/MessageListTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="455">
-              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -158,15 +157,15 @@
         <option value="$PROJECT_DIR$/src/main/java/app/MessageList.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/UserList.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/util/ChatList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/app/ChatList.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/app/Chat.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/websocketDemo.js" />
         <option value="$PROJECT_DIR$/src/main/resources/public/index.html" />
         <option value="$PROJECT_DIR$/src/test/java/app/UserListTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/app/ChatUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/app/ChatUserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/app/MessageListTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/app/ChatList.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/websocketDemo.js" />
       </list>
     </option>
   </component>
@@ -307,7 +306,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MessageListTest">
+  <component name="RunManager" selected="Application.Chat">
     <configuration name="Chat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Chat" />
       <module name="Chaticus" />
@@ -443,10 +442,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Chat" />
         <item itemvalue="JUnit.MessageListTest" />
         <item itemvalue="JUnit.ChatUserTest" />
         <item itemvalue="JUnit.UserListTest" />
-        <item itemvalue="Application.Chat" />
         <item itemvalue="Application.HelloWorld" />
       </list>
     </recent_temporary>
@@ -473,12 +472,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserListTest - 2018.06.14 at 20h 55m 59s.xml">
-      <configuration name="UserListTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserListTest - 2018.06.14 at 21h 01m 11s.xml">
-      <configuration name="UserListTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ChatUserTest - 2018.06.14 at 21h 01m 36s.xml">
       <configuration name="ChatUserTest" configurationId="JUnit" />
     </history-entry>
@@ -503,9 +496,15 @@
     <history-entry file="MessageListTest - 2018.06.14 at 21h 08m 46s.xml">
       <configuration name="MessageListTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MessageListTest - 2018.06.14 at 21h 13m 40s.xml">
+      <configuration name="MessageListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageListTest - 2018.06.14 at 21h 14m 15s.xml">
+      <configuration name="MessageListTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="23" width="1813" height="1102" extended-state="0" />
+    <frame x="1" y="23" width="1813" height="1102" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -516,7 +515,7 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.31906614" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.31906614" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
@@ -792,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/ChatList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/app/Chat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -806,13 +798,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/websocketDemo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="106" column="218" selection-start-line="106" selection-start-column="218" selection-end-line="106" selection-end-column="218" />
         </state>
       </provider>
     </entry>
@@ -830,10 +815,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/ChatUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/MessageList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-711">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app/MessageListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app/ChatUserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="333" selection-start-line="333" selection-end-line="333" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/app/UserListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -849,38 +869,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/ChatUser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/app/ChatList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="387">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app/UserListTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/websocketDemo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app/ChatUserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/app/MessageList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/app/MessageListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+        <state relative-caret-position="462">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
         </state>
       </provider>
     </entry>

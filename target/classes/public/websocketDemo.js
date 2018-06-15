@@ -42,6 +42,7 @@ function logout() {
         ws.send(JSON.stringify(msg));
         $('.nav-tabs a[href="#menu1"]').tab('show');
         id("chat").innerHTML = "";
+        alert("BYE!");
 }
 
 function createUser(username, password) {
