@@ -18,7 +18,7 @@ id("message").addEventListener("keypress", function (e) {
     }
 });
 // Add event listeners to button and input field to shutup button
-id("shutup").addEventListener("dblclick", () => alert("shutup"));
+// id("shutup").addEventLiIstener("dblclick", () => alert("shutup"));
 id("message").addEventListener("keypress", function (e) {
     if (e.keyCode === 13) { // Send message if enter is pressed in input field
         sendAndClear(e.target.value);
